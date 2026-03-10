@@ -20,7 +20,7 @@ export default function Home() {
           </a>
 
           <a
-            href="/add-post"
+            href="/add-posts"
             className="bg-blue-700 text-white px-6 py-3 rounded-lg text-lg font-semibold shadow hover:bg-blue-800 transition"
           >
             Write a Post
