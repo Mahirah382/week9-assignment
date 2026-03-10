@@ -1,6 +1,6 @@
 export default function Home() {
   return (
-    <div className="min-h-screen bg-linear-to-br from-blue-500 via-purple-500 to-indigo-600 flex items-center justify-center px-6 py-20">
+    <div className="min-h-screen bg-linear-to-br from-blue-300 via-purple-400 to-indigo-500 flex items-center justify-center px-6 py-20">
       <div className="max-w-3xl mx-auto text-center text-white space-y-10">
 
         <h1 className="text-5xl sm:text-6xl font-extrabold drop-shadow-lg">

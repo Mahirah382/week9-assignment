@@ -10,7 +10,7 @@ export default async function OnePost({params}) {
     
 
     return (
-      <div className="min-h-screen bg-linear-to-br from-blue-500 via-purple-500 to-indigo-600 py-16 px-6 max-w-3xl mx-auto space-y-10">
+      <div className="min-h-screen bg-linear-to-br from-blue-300 via-purple-400 to-indigo-500 py-16 px-6 max-w-3xl mx-auto space-y-10">
         <article className="bg-white p-10 rounded-xl shadow-xl">
           <h2 className="text-4xl font-extrabold text-gray-900 mb-4">{post.title}</h2>
           <p className="prose prose-lg max-w-none text-gray-800">{post.content}</p>

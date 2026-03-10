@@ -8,7 +8,7 @@ export default function NavBar() {
                     <div className="flex gap-6 text-lg font-medium">
                         <Link href="/" className="hover:text-gray-200 transition">Home</Link>
                         <Link href="/posts" className="hover:text-gray-200 transition">Posts</Link>
-                        <Link href="/add-post" className="hover:text-gray-200 transition">Add Posts</Link>
+                        <Link href="/add-posts" className="hover:text-gray-200 transition">Add Posts</Link>
                     </div>
             </nav>
         </div>
