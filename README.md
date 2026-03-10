@@ -1,36 +1,40 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Weekly Blogs — Full‑Stack Next.js App
+A vibrant, full‑stack blogging application built with Next.js (App Router), PostgreSQL, and Tailwind CSS.
+Users can create posts, view posts, sort them, delete them, and comment on individual posts.
+This project fulfills all required user stories and technical requirements.
 
-## Getting Started
+# Features
+ Create Posts
+- Users can create new blog posts using a clean, styled form.
+- After submitting, users are automatically redirected to the posts page.
 
-First, run the development server:
+ View All Posts
+- All posts are displayed on a dedicated posts page.
+- Users can sort posts by date in ascending or descending order.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+Delete Posts
+- Each post includes a delete button.
+- Posts are removed from the database instantly.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+ Comment on Posts
+- Each post has its own dynamic route (/posts/[id]).
+- Users can add comments directly on the post’s page.
+- Comments are stored in a dedicated comments table and linked via a foreign key.
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+ Modern UI
+- Fully styled using Tailwind CSS.
+- Gradient backgrounds + clean white cards.
+- Responsive, modern, and consistent design across all pages.
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+# Technologies Used
+- Next.js 14 (App Router)
+- React Server Components
+- PostgreSQL
+- Tailwind CSS
+- Node.js
+- Vercel / Local Development
 
-## Learn More
-
-To learn more about Next.js, take a look at the following resources:
-
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
-
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
-
-## Deploy on Vercel
-
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
-
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+# Reflection
+- overal it was okay, BUT i was dealing with an error for so long, it took my whole weekend. i tried googling which didnt work so i had to resort to using AI which told me something in my code my making my whole app into a client... or something. it told me to do a bunch of stuff and i think it made things worse i literally started fresh. it said to make seperate api routes which worked in the end. And i made sure to only put 'use client' to components that actually needed it.
+- i enjoyed the styling, i think tailwindcss is my favourite 😃
+- i had a few errors but it was all coming from the same thing(something was making the app a client) once i got that fixed it was pretty much ok.
