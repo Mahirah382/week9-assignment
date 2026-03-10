@@ -3,13 +3,8 @@ import PostCard from "@/components/PostCard"
 
 export default async function PostsPage() {
 
-    console.log("STEP 1: connecting");
-
     const db = connect()
-    console.log("STEP 2: querying");
-
     const posts = (await db.query("SELECT * FROM posts")).rows
-    console.log("STEP 3: rendering");
 
     
     return(

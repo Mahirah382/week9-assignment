@@ -1,26 +1,17 @@
-import { connect } from "@/utils/utilities"
-import { revalidatePath } from "next/cache";
+"use client";
 
-export default async function AddComment({id}) {
-    const db = connect()
-    async function handleComment(formData) {
-        'use server'
-        const {user_name, content} = Object.fromEntries(formData);
+export default function AddComment({ postId }) {
+  return (
+    <form method="POST" action="/api/comments" className="bg-white p-6 rounded-xl shadow mt-6 space-y-4">
+      <input type="hidden" name="post_id" value={postId} />
 
-        const newComment = db.query(`INSERT INTO comments (user_name, content, post_id) VALUES ($1, $2, $3)`, [user_name, content, id]);
+      <label className="block font-medium mb-1">Username</label>
+      <input name="user_name" required  className="w-full border rounded-lg p-2 focus:ring focus:ring-blue-300"/>
 
-        revalidatePath(`/posts/${id}`);
-    }
+      <label className="block font-medium mb-1">Comment</label>
+      <textarea name="content" required className="w-full border rounded-lg p-2 h-24 focus:ring focus:ring-blue-300"/>
 
-    return (
-        <>
-        <form action={handleComment}>
-            <label htmlFor="user_name">Enter your Username</label>
-            <input name="user_name" type="text"></input>
-            <label htmlFor="content">Enter a comment</label>
-            <textarea name="content" required />
-            <button type="submit">submit</button>
-        </form>
-        </>
-    )
+      <button type="submit" className="bg-blue-600 text-white px-4 py-2 rounded-lg hover:bg-blue-700 transition">Submit</button>
+    </form>
+  );
 }

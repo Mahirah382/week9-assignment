@@ -1,5 +1,10 @@
-import pg from "pg"
+import pg from "pg";
 
-export function connect () {
-    return new pg.Pool({connectionString:process.env.DB_CONN})
+export function connect() {
+  const client = new pg.Client({
+    connectionString: process.env.DB_CONN,
+  });
+
+  client.connect();
+  return client;
 }
