@@ -10,15 +10,15 @@ export default async function OnePost({params}) {
     
 
     return (
-      <div className="max-w-3xl mx-auto mt-10 space-y-10">
-        <article className="bg-white p-8 roundedxl shadow">
-          <h2 className="text-4xl font-bold mb-4">{post.title}</h2>
-          <p className="text-gray-500 text-sm mb-6">{post.content}</p>
+      <div className="min-h-screen bg-linear-to-br from-blue-500 via-purple-500 to-indigo-600 py-16 px-6 max-w-3xl mx-auto space-y-10">
+        <article className="bg-white p-10 rounded-xl shadow-xl">
+          <h2 className="text-4xl font-extrabold text-gray-900 mb-4">{post.title}</h2>
+          <p className="prose prose-lg max-w-none text-gray-800">{post.content}</p>
         </article>
 
-        <h3>Comments</h3>
+        <h3 className="font-semibold text-black">Comments</h3>
         <Comments comments={comments} />
-        <h3>Add a comment</h3>
+        <h3 className="font-semibold text-black">Add a comment</h3>
         <AddComment postId={id}/>
       </div>
     )
